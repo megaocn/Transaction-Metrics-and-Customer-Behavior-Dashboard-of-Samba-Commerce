@@ -62,7 +62,7 @@ ELSEIF [R-Score] == 1 AND [F-Score] <= 2 AND [M-Score] <=2 <br>
 THEN 'Potential To Become Best Customer' <br>
 ELSEIF [F-Score] == 1 <br>
 THEN 'Loyal Customer' <br>
-ELSEIF [M-Score] == 1 <br
+ELSEIF [M-Score] == 1 <br>
 THEN 'Big Spenders' <br>
 ELSEIF [RFM-Score] == 311 <br>
 THEN 'Almost Lost' <br>
@@ -89,4 +89,4 @@ DATEDIFF('month',[first_order_date],[Order Purchase Date]) <br>
 
 4. Drag count distinct customer_id to text and color
 
-5. Click CNTD(customer_id) in marks text > quick table calculation > percent of total
+5. Click CNTD(customer_id) in marks text and color > quick table calculation > percent of total
