@@ -1,7 +1,7 @@
 # Transaction Metrics and Customer Behavior Dashboard of Samba Commerce
 
 ## Project Overview
-The project has been done for Data Visualization Individual Assignment by RevoU. Inspired by [Samba Commerce Dataset](https://docs.google.com/spreadsheets/d/1Bd7Afsw7KutUM-khimfnheSAehzWUpDxPL7i0WUvSDg/edit?usp=sharing), I did the Exploratory Data Visualization (EDV) in tableau, as well as data cleaning in Tableau to convert data type and handle irrelevant value.
+The project has been done for Data Visualization Individual Assignment by RevoU. Inspired by [Samba Commerce Dataset](https://docs.google.com/spreadsheets/d/1Bd7Afsw7KutUM-khimfnheSAehzWUpDxPL7i0WUvSDg/edit?usp=sharing), I did the Exploratory Data Visualization (EDV) in Tableau, as well as data cleaning in Tableau to convert data type and handle irrelevant value. Samba Commerce is a fictitious fast growing e-commerce in Brazil that launched in 2021 and offers more than 15K products and more than 50 product categories.
 
 ## Project Summary
 From the data exploration, I discovered the problem that there is a low retention rate in 2021 (0.33%) and the longest period from customer's order date to deliver date (13 days). Most of the customers only ordered for one unique item in each order. Hence, to make a right suggestion based on user preferences, RFM segmentation is needed. From segmentation, we have only a few Best Customers (257 from 48K+ customers) and the most dominant customers are Occasional Buyers (14.676 from 48K+ customers). To maintain those customers, there will be some targeted activities based on each segment.
