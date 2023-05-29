@@ -1,1 +1,1 @@
-# Transaction-Metrics-and-Customer-Behavior-Dashboard-of-Samba-Commerce
+# Transaction Metrics and Customer Behavior Dashboard of Samba Commerce
