@@ -1,19 +1,19 @@
-# Calculated Field in Tableau for Exploratory Data Visualization
+Calculated Field in Tableau for Exploratory Data Visualization
 
-# AVG Customer per City
+a. Average Number of Customers per City
 COUNTD([Customer Id])/COUNTD([City])
 
-# AOV
+b. Average Order Value (AOV)
 SUM([total_payment_value])/COUNTD([Order Id])
 
-# LOD of Unique Item
+c. Level of Detail (LOD) of Unique Item
 {FIXED ([Customer Id]): COUNTD([Product Id])/COUNTD([Customer Id])}
 
-# GMV
+d. GMV
 [Price]*[Qty Item]
 
-# RFM Analysis
-- Calculate R, F, M measure
+e. RFM Analysis
+1. Calculate R, F, M measure
 RFM-R
 DATEDIFF('day',{ FIXED [Customer ID]:MAX([Invoice Date])},{MAX([Invoice Date])})
 RFM-F
@@ -21,7 +21,7 @@ RFM-F
 RFM-M
 {FIXED [Customer ID]: SUM([Sales Amount])}
 
-- Calculate RFM score
+2. Calculate RFM score
 - R-Score
 IF [RFM-R] <= {FIXED:PERCENTILE([RFM-R],0.25)} 
 THEN 1
@@ -55,7 +55,7 @@ END
 - RFM-Score
 INT(STR([R-Score])+STR([F-Score])+STR([M-Score]))
 
-- RFM Segment
+3. RFM Segment
 IF [RFM-Score] == 111
 THEN 'Best Customers'
 
@@ -89,16 +89,15 @@ THEN 'New Customers Potential to Lost'
 END
 
 
-# Cohort Analysis
-- first order date
+f. Cohort Analysis
+- Calculated field of first order date
 {FIXED([Customer Id]):MIN([Order Purchase Date])}
 
-- Difference month after first purchase time
+- Calculated field of difference month after first purchase time
 DATEDIFF('month',[first_order_date],[Order Purchase Date])
 
 - Drag first order date to rows > change to month
 
 - Drag count distinct customer id to text and customer name to color. use pivot table with heatmap
 
-- Click CNTD(customer_name) > marks text > quick table calculation > percent of total
-
+- Click CNTD(customer_name) in marks text > quick table calculation > percent of total
