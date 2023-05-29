@@ -1,18 +1,18 @@
-Calculated Field in Tableau for Exploratory Data Visualization
+# **Calculated Field in Tableau for Exploratory Data Visualization**
 
-a. Average Number of Customers per City
+## **a. Average Number of Customers per City**
 COUNTD([Customer Id])/COUNTD([City])
 
-b. Average Order Value (AOV)
+## **b. Average Order Value (AOV)**
 SUM([total_payment_value])/COUNTD([Order Id])
 
-c. Level of Detail (LOD) of Unique Item
+## **c. Level of Detail (LOD) of Unique Item**
 {FIXED ([Customer Id]): COUNTD([Product Id])/COUNTD([Customer Id])}
 
-d. GMV
+## **d. GMV**
 [Price]*[Qty Item]
 
-e. RFM Analysis
+## **e. RFM Analysis**
 1. Calculate R, F, M measure
 RFM-R
 DATEDIFF('day',{ FIXED [Customer ID]:MAX([Invoice Date])},{MAX([Invoice Date])})
@@ -89,15 +89,15 @@ THEN 'New Customers Potential to Lost'
 END
 
 
-f. Cohort Analysis
-- Calculated field of first order date
+## **f. Cohort Analysis**
+1. Calculated field of first order date
 {FIXED([Customer Id]):MIN([Order Purchase Date])}
 
-- Calculated field of difference month after first purchase time
+2. Calculated field of difference month after first purchase time
 DATEDIFF('month',[first_order_date],[Order Purchase Date])
 
-- Drag first order date to rows > change to month
+3. Drag first order date to rows > change to month
 
-- Drag count distinct customer id to text and customer name to color. use pivot table with heatmap
+4. Drag count distinct customer_id to text and color
 
-- Click CNTD(customer_name) in marks text > quick table calculation > percent of total
+5. Click CNTD(customer_id) in marks text > quick table calculation > percent of total
